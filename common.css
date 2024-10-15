@@ -1,0 +1,42 @@
+html {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: "Courier New", Courier, monospace;
+}
+
+body {
+  --img-invert: 0;
+  --text-color: black;
+  --background-color: rgb(247, 231, 208);
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.black-mode {
+  color: white;
+  --img-invert: 1;
+  --text-color: white;
+  --background-color: black;
+}
+
+.black-mode-div {
+  position: fixed;
+  bottom: 5px;
+  right: 0px;
+}
+
+.black-mode-img {
+  width: 24px;
+}
+
+/* based on https://habr.com/en/sandbox/163605/ */
+@media (pointer: coarse) {
+  /* mobile device */
+  @media screen and (orientation: portrait) {
+    .black-mode-img {
+      width: 48px;
+    }
+  }
+}
